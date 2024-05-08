@@ -7,8 +7,13 @@ body {
 
 /* sections */
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include media-screen(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
   &__title {
     color: var(--secondary-text-color);
