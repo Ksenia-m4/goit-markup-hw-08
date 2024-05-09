@@ -16,9 +16,23 @@ body {
   }
 
   &__title {
+    margin-bottom: 30px;
+
     color: var(--secondary-text-color);
-    font-size: 36px;
+    font-size: 28px;
     letter-spacing: 0.03em;
     text-align: center;
+
+    @include media-screen(desktop) {
+      margin-bottom: 50px;
+      font-size: 36px;
+    }
   }
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }

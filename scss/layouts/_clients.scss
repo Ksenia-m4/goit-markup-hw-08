@@ -1,17 +1,22 @@
 /* clients */
 
-.clients-title {
-  margin-bottom: 50px;
-}
-
 .clients__list {
   display: flex;
-  column-gap: 30px;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .clients__item {
-  width: 170px;
+  width: calc((100% - 30px) / 2);
   height: 92px;
+
+  @include media-screen(tablet) {
+    width: calc((100% - 60px) / 3);
+  }
+
+  @include media-screen(desktop) {
+    width: calc((100% - 150px) / 6);
+  }
 }
 
 .clients__link {

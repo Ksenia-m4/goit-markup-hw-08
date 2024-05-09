@@ -1,23 +1,33 @@
 /* our team */
 .our-team {
   background: var(--lightest-gray-color);
-
-  &__title {
-    margin-bottom: 50px;
-  }
 }
 
 .members {
   display: flex;
-  column-gap: 30px;
+  flex-direction: column;
+  gap: 30px;
+
+  @include media-screen(tablet) {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 
   &__item {
     border-radius: 0 0 4px 4px;
-    width: 270px;
+    width: 100%;
 
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
       0 1px 3px 0 rgba(0, 0, 0, 0.12);
     background: #fff;
+
+    @include media-screen(tablet) {
+      width: calc((100% - 30px) / 2);
+    }
+
+    @include media-screen(desktop) {
+      width: calc((100% - 90px) / 4);
+    }
   }
 
   &__pic {
@@ -49,6 +59,7 @@
 
 .socials__list {
   display: flex;
+  justify-content: center;
   column-gap: 10px;
 }
 
