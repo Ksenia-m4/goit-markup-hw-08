@@ -3,21 +3,26 @@
   border-bottom: 1px solid #ececec;
 
   &__container {
+    height: 60px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 }
 
 .navigation {
   display: flex;
   align-items: center;
-  margin-right: auto;
 }
 
 .header-nav {
-  display: flex;
-  align-items: center;
-  column-gap: 50px;
+  display: none;
+
+  @include media-screen(desktop) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+  }
 }
 
 .header-nav__link {
@@ -59,9 +64,13 @@
 /* header contacts */
 
 .header-contacts {
-  display: flex;
-  gap: 30px;
-  align-items: center;
+  display: none;
+
+  @include media-screen(desktop) {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
 
   &__item {
     display: flex;
