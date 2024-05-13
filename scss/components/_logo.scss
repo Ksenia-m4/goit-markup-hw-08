@@ -1,6 +1,18 @@
 /* logo */
 .logo {
-  margin-right: 93px;
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @include media-screen(tablet) {
+    margin-right: 87px;
+  }
+
+  @include media-screen(desktop) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    margin-right: 92px;
+  }
 
   font-family: var(--second-font-family);
   font-weight: 700;

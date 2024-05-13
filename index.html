@@ -30,12 +30,14 @@
           >
           <button
             type="button"
-            class="nav-button"
+            class="menu-toggle js-open-menu"
             aria-label="Перемикач мобільного меню"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
           >
             <svg width="40" height="40">
               <use
-                class="icon-menu"
+                class="icon-close"
                 href="./images/icons.svg#icon-nav-close"
               ></use>
               <use
@@ -44,6 +46,12 @@
               ></use>
             </svg>
           </button>
+
+          <ul class="mobile-menu" id="mobile-menu">
+            <li><a href="" class="link">Студія</a></li>
+            <li><a href="" class="link">Портфоліо</a></li>
+            <li><a href="" class="link">Контакти</a></li>
+          </ul>
 
           <ul class="header-nav">
             <li class="header-nav__item">
@@ -208,13 +216,37 @@
           <h2 class="section__title our-team__title">Наша команда</h2>
           <ul class="members">
             <li class="members__item">
-              <img
-                class="members__pic"
-                src="./images/product-designer.jpg"
-                alt="Дизайнер продукту"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/product-designer-desk.jpg    1x,
+                    ./images/product-designer-desk-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/product-designer-tab.jpg    1x,
+                    ./images/product-designer-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/product-designer-mob.jpg    1x,
+                    ./images/product-designer-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="members__pic"
+                  src="./images/product-designer-mob.jpg"
+                  alt="Дизайнер продукту"
+                  width="450"
+                  height="460"
+                />
+              </picture>
+
               <div class="members__content">
                 <h3 class="members__subtitle">Ігор Дем'яненко</h3>
                 <p class="members__position" lang="en">Product Designer</p>
@@ -266,13 +298,36 @@
               </div>
             </li>
             <li class="members__item">
-              <img
-                class="members__pic"
-                src="./images/frontend-developer.jpg"
-                alt="Фронтенд розробник"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/frontend-developer-desk.jpg    1x,
+                    ./images/frontend-developer-desk-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/frontend-developer-tab.jpg    1x,
+                    ./images/frontend-developer-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/frontend-developer-mob.jpg    1x,
+                    ./images/frontend-developer-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="members__pic"
+                  src="./images/frontend-developer-mob.jpg"
+                  alt="Дизайнер продукту"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="members__content">
                 <h3 class="members__subtitle">Ольга Рєпіна</h3>
                 <p class="members__position" lang="en">Frontend Developer</p>
@@ -323,13 +378,36 @@
               </div>
             </li>
             <li class="members__item">
-              <img
-                class="members__pic"
-                src="./images/marketing.jpg"
-                alt="Маркетолог"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/marketing-desk.jpg    1x,
+                    ./images/marketing-desk-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/marketing-tab.jpg    1x,
+                    ./images/marketing-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/marketing-mob.jpg    1x,
+                    ./images/marketing-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="members__pic"
+                  src="./images/marketing-mob.jpg"
+                  alt="Дизайнер продукту"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="members__content">
                 <h3 class="members__subtitle">Микола Тарасов</h3>
                 <p class="members__position" lang="en">Marketing</p>
@@ -380,13 +458,36 @@
               </div>
             </li>
             <li class="members__item">
-              <img
-                class="members__pic"
-                src="./images/ui-designer.jpg"
-                alt="UI Дизайнер"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/ui-designer-desk.jpg    1x,
+                    ./images/ui-designer-desk-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/ui-designer-tab.jpg    1x,
+                    ./images/ui-designer-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/ui-designer-mob.jpg    1x,
+                    ./images/ui-designer-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="members__pic"
+                  src="./images/ui-designer-mob.jpg"
+                  alt="Дизайнер продукту"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="members__content">
                 <h3 class="members__subtitle">Михайло Єрмаков</h3>
                 <p class="members__position" lang="en">UI Designer</p>
@@ -722,5 +823,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

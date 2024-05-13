@@ -1,1 +1,36 @@
+.menu-toggle {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
 
+  @include media-screen(tablet) {
+    display: none;
+  }
+}
+
+.icon-close {
+  display: none;
+}
+
+.nav-button.is-open .icon-close {
+  display: block;
+}
+
+.nav-button.is-open .icon-menu {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+
+  &.is-open {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 40px 48px;
+  }
+}
