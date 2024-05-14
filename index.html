@@ -28,30 +28,20 @@
           <a class="logo" href="./index.html" lang="en"
             ><span class="logo__text--accent">Web</span>Studio</a
           >
+
           <button
             type="button"
-            class="menu-toggle js-open-menu"
+            class="mob-menu__btn--open"
             aria-label="Перемикач мобільного меню"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
+            data-menu-open
           >
             <svg width="40" height="40">
-              <use
-                class="icon-close"
-                href="./images/icons.svg#icon-nav-close"
-              ></use>
               <use
                 class="icon-menu"
                 href="./images/icons.svg#icon-nav-menu"
               ></use>
             </svg>
           </button>
-
-          <ul class="mobile-menu" id="mobile-menu">
-            <li><a href="" class="link">Студія</a></li>
-            <li><a href="" class="link">Портфоліо</a></li>
-            <li><a href="" class="link">Контакти</a></li>
-          </ul>
 
           <ul class="header-nav">
             <li class="header-nav__item">
@@ -92,6 +82,94 @@
             >
           </li>
         </ul>
+      </div>
+
+      <!-- mobile menu -->
+      <div class="mob-menu visually-hidden" data-menu>
+        <button type="button" class="mob-menu__btn--close" data-menu-close>
+          <svg width="40" height="40">
+            <use
+              class="icon-close"
+              href="./images/icons.svg#icon-nav-close"
+            ></use>
+          </svg>
+        </button>
+        <div>
+          <ul class="mob-menu__nav">
+            <li class="mob-menu__item">
+              <a
+                href="./index.html"
+                class="mob-menu__link mob-menu__link--current link"
+                >Студія</a
+              >
+            </li>
+            <li class="mob-menu__item">
+              <a href="./portfolio.html" class="link mob-menu__link"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="mob-menu__item">
+              <a href="" class="link mob-menu__link">Контакти</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul class="mob-menu__contacts">
+            <li class="mob-contacts__item">
+              <a href="tel:+380961111111" class="mob-contacts__tel link">
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="mob-contacts__mail">
+              <a
+                href="mailto:info@devstudio.com"
+                class="mob-contacts__link link"
+              >
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <ul class="mob-menu__socials">
+            <li class="mob-socials__item">
+              <a
+                href=""
+                class="mob-socials__link link"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >Instagram</a
+              >
+            </li>
+            <li class="mob-socials__item">
+              <a
+                href=""
+                class="mob-socials__link link"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >Twitter</a
+              >
+            </li>
+            <li class="mob-socials__item">
+              <a
+                href=""
+                class="mob-socials__link link"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >Facebook</a
+              >
+            </li>
+            <li class="mob-socials__item">
+              <a
+                href=""
+                class="mob-socials__link link"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -823,6 +901,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
-    <script defer src="js/mobile-menu.js"></script>
+    <script defer src="js/menu.js"></script>
   </body>
 </html>
