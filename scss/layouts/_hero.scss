@@ -11,10 +11,31 @@
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/hero-bg-mob.jpg);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-bg-mob.webp);
+
   max-width: 1600px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @include media-screen(retina) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-bg-mob-2x.jpg);
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-bg-mob-2x.webp);
+  }
+
+  // tablet
 
   @include media-screen(tablet) {
     background-image: linear-gradient(
@@ -22,7 +43,28 @@
         rgba(47, 48, 58, 0.4)
       ),
       url(../images/hero-bg-tab.jpg);
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-bg-tab.webp);
+
+    @include media-screen(retina) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero-bg-tab-2x.jpg);
+
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero-bg-tab-2x.webp);
+    }
   }
+
+  // desktop
 
   @include media-screen(desktop) {
     background-image: linear-gradient(
@@ -30,6 +72,26 @@
         rgba(47, 48, 58, 0.4)
       ),
       url(../images/hero-bg-desk.jpg);
+
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-bg-desk.webp);
+
+    @include media-screen(retina) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero-bg-desk-2x.jpg);
+
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero-bg-desk-2x.webp);
+    }
   }
 
   &__title {
