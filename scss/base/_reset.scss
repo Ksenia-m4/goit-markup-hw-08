@@ -18,3 +18,9 @@ ul {
   text-decoration: none;
   color: var(--primary-text-color);
 }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
