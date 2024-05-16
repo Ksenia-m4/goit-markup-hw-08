@@ -103,16 +103,26 @@
           </ul>
           <!-- portfolio cards -->
           <ul class="list cards__list">
-            <li class="cards__ite m">
+            <li class="cards__item">
               <a class="link cards__link" href=""
                 ><div class="cards__thumb">
                   <img
                     class="cards__pic"
-                    src="./images/portfolio-1.jpg"
-                    alt="Ресторан"
-                    width="370"
+                    srcset="
+                      ./images/portfolio-1-354.jpg 354w,
+                      ./images/portfolio-1-370.jpg 370w,
+                      ./images/portfolio-1-450.jpg 450w,
+                      ./images/portfolio-1-708.jpg 708w,
+                      ./images/portfolio-1-740.jpg 740w,
+                      ./images/portfolio-1-900.jpg 900w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 480px) 450px, 100vw"
+                    src="./images/portfolio-1-450.jpg"
+                    alt="Веб-сайт"
+                    width="450"
                     height="294"
                   />
+
                   <div class="cards__overlay">
                     <p class="cards__overlay-content">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -128,17 +138,42 @@
                 </div>
               </a>
             </li>
-            <!--  -->
             <li class="cards__item">
               <a class="link cards__link" href=""
                 ><div class="cards__thumb">
-                  <img
-                    class="cards__pic"
-                    src="./images/portfolio-2.jpg"
-                    alt="Ресторан"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-2-desk.jpg    1x,
+                        ./images/portfolio-2-desk@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio-2-tab.jpg    1x,
+                        ./images/portfolio-2-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-2-mob.jpg    1x,
+                        ./images/portfolio-2-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="cards__pic"
+                      src="./images/portfolio-2-mob.jpg"
+                      alt="Дизайн"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="cards__overlay">
                     <p class="cards__overlay-content">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -157,10 +192,34 @@
             <li class="cards__item">
               <a class="link cards__link" href=""
                 ><div class="cards__thumb">
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/portfolio-3-desk.jpg    1x,
+                      ./images/portfolio-3-desk@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio-3-tab.jpg    1x,
+                      ./images/portfolio-3-tab@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/portfolio-3-mob.jpg    1x,
+                      ./images/portfolio-3-mob@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
                   <img
                     class="cards__pic"
-                    src="./images/portfolio-3.jpg"
-                    alt="Ресторан"
+                    src="./images/portfolio-3-mob.jpg"
+                    alt="Додаток"
                     width="370"
                     height="294"
                   />
@@ -182,10 +241,34 @@
             <li class="cards__item">
               <a class="link cards__link" href=""
                 ><div class="cards__thumb">
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/portfolio-4-desk.jpg    1x,
+                      ./images/portfolio-4-desk@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio-4-tab.jpg    1x,
+                      ./images/portfolio-4-tab@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/portfolio-4-mob.jpg    1x,
+                      ./images/portfolio-4-mob@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
                   <img
                     class="cards__pic"
-                    src="./images/portfolio-4.jpg"
-                    alt="Ресторан"
+                    src="./images/portfolio-4-mob.jpg"
+                    alt="Маркетинг"
                     width="370"
                     height="294"
                   />
@@ -207,10 +290,34 @@
             <li class="cards__item">
               <a class="link cards__link" href=""
                 ><div class="cards__thumb">
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/portfolio-5-desk.jpg    1x,
+                      ./images/portfolio-5-desk@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio-5-tab.jpg    1x,
+                      ./images/portfolio-5-tab@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/portfolio-5-mob.jpg    1x,
+                      ./images/portfolio-5-mob@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
                   <img
                     class="cards__pic"
-                    src="./images/portfolio-5.jpg"
-                    alt="Ресторан"
+                    src="./images/portfolio-5-mob.jpg"
+                    alt="Додаток"
                     width="370"
                     height="294"
                   />
@@ -232,10 +339,34 @@
             <li class="cards__item">
               <a class="link cards__link" href=""
                 ><div class="cards__thumb">
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/portfolio-6-desk.jpg    1x,
+                      ./images/portfolio-6-desk@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio-6-tab.jpg    1x,
+                      ./images/portfolio-6-tab@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/portfolio-6-mob.jpg    1x,
+                      ./images/portfolio-6-mob@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
                   <img
                     class="cards__pic"
-                    src="./images/portfolio-6.jpg"
-                    alt="Ресторан"
+                    src="./images/portfolio-6-mob.jpg"
+                    alt="Веб-сайт"
                     width="370"
                     height="294"
                   />
@@ -257,10 +388,34 @@
             <li class="cards__item">
               <a class="link cards__link" href=""
                 ><div class="cards__thumb">
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/portfolio-7-desk.jpg    1x,
+                      ./images/portfolio-7-desk@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio-7-tab.jpg    1x,
+                      ./images/portfolio-7-tab@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/portfolio-7-mob.jpg    1x,
+                      ./images/portfolio-7-mob@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
                   <img
                     class="cards__pic"
-                    src="./images/portfolio-7.jpg"
-                    alt="Ресторан"
+                    src="./images/portfolio-7-mob.jpg"
+                    alt="Дизайн"
                     width="370"
                     height="294"
                   />
@@ -282,10 +437,34 @@
             <li class="cards__item">
               <a class="link cards__link" href=""
                 ><div class="cards__thumb">
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/portfolio-8-desk.jpg    1x,
+                      ./images/portfolio-8-desk@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio-8-tab.jpg    1x,
+                      ./images/portfolio-8-tab@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/portfolio-8-mob.jpg    1x,
+                      ./images/portfolio-8-mob@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
                   <img
                     class="cards__pic"
-                    src="./images/portfolio-8.jpg"
-                    alt="Ресторан"
+                    src="./images/portfolio-8-mob.jpg"
+                    alt="Маркетинг"
                     width="370"
                     height="294"
                   />
@@ -307,10 +486,34 @@
             <li class="cards__item">
               <a class="link cards__link" href=""
                 ><div class="cards__thumb">
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/portfolio-9-desk.jpg    1x,
+                      ./images/portfolio-9-desk@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio-9-tab.jpg    1x,
+                      ./images/portfolio-9-tab@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/portfolio-9-mob.jpg    1x,
+                      ./images/portfolio-9-mob@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
                   <img
                     class="cards__pic"
-                    src="./images/portfolio-9.jpg"
-                    alt="Ресторан"
+                    src="./images/portfolio-9-mob.jpg"
+                    alt="Додаток"
                     width="370"
                     height="294"
                   />
