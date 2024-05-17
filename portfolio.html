@@ -24,10 +24,23 @@
     <header class="header">
       <div class="container header__container">
         <nav class="navigation">
-          <!-- logo -->
           <a class="logo" href="./index.html" lang="en"
             ><span class="logo__text--accent">Web</span>Studio</a
           >
+
+          <button
+            type="button"
+            class="mob-menu__btn--open"
+            aria-label="Перемикач мобільного меню"
+            data-menu-open
+          >
+            <svg width="40" height="40">
+              <use
+                class="icon-menu"
+                href="./images/icons.svg#icon-nav-menu"
+              ></use>
+            </svg>
+          </button>
 
           <ul class="header-nav">
             <li class="header-nav__item">
@@ -36,7 +49,7 @@
             <li class="header-nav__item">
               <a
                 href="./portfolio.html"
-                class="header-nav__link header-nav__link--current link"
+                class="link header-nav__link header-nav__link--current"
                 >Портфоліо</a
               >
             </li>
@@ -66,6 +79,94 @@
             >
           </li>
         </ul>
+      </div>
+
+      <!-- mobile menu -->
+      <div class="mob-menu visually-hidden" data-menu>
+        <button type="button" class="mob-menu__btn--close" data-menu-close>
+          <svg width="40" height="40">
+            <use
+              class="icon-close"
+              href="./images/icons.svg#icon-nav-close"
+            ></use>
+          </svg>
+        </button>
+        <div>
+          <ul class="mob-menu__nav">
+            <li class="mob-menu__item">
+              <a
+                href="./index.html"
+                class="mob-menu__link mob-menu__link--current link"
+                >Студія</a
+              >
+            </li>
+            <li class="mob-menu__item">
+              <a href="./portfolio.html" class="link mob-menu__link"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="mob-menu__item">
+              <a href="" class="link mob-menu__link">Контакти</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <ul class="mob-menu__contacts">
+            <li class="mob-contacts__item">
+              <a href="tel:+380961111111" class="mob-contacts__tel link">
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="mob-contacts__mail">
+              <a
+                href="mailto:info@devstudio.com"
+                class="mob-contacts__link link"
+              >
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <ul class="mob-menu__socials">
+            <li class="mob-socials__item">
+              <a
+                href=""
+                class="mob-socials__link link"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >Instagram</a
+              >
+            </li>
+            <li class="mob-socials__item">
+              <a
+                href=""
+                class="mob-socials__link link"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >Twitter</a
+              >
+            </li>
+            <li class="mob-socials__item">
+              <a
+                href=""
+                class="mob-socials__link link"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >Facebook</a
+              >
+            </li>
+            <li class="mob-socials__item">
+              <a
+                href=""
+                class="mob-socials__link link"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -192,37 +293,39 @@
             <li class="cards__item">
               <a class="link cards__link" href=""
                 ><div class="cards__thumb">
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      ./images/portfolio-3-desk.jpg    1x,
-                      ./images/portfolio-3-desk@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./images/portfolio-3-tab.jpg    1x,
-                      ./images/portfolio-3-tab@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <source
-                    media="(max-width: 767px)"
-                    srcset="
-                      ./images/portfolio-3-mob.jpg    1x,
-                      ./images/portfolio-3-mob@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <img
-                    class="cards__pic"
-                    src="./images/portfolio-3-mob.jpg"
-                    alt="Додаток"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-3-desk.jpg    1x,
+                        ./images/portfolio-3-desk@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio-3-tab.jpg    1x,
+                        ./images/portfolio-3-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-3-mob.jpg    1x,
+                        ./images/portfolio-3-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="cards__pic"
+                      src="./images/portfolio-3-mob.jpg"
+                      alt="Додаток"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="cards__overlay">
                     <p class="cards__overlay-content">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -241,37 +344,39 @@
             <li class="cards__item">
               <a class="link cards__link" href=""
                 ><div class="cards__thumb">
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      ./images/portfolio-4-desk.jpg    1x,
-                      ./images/portfolio-4-desk@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./images/portfolio-4-tab.jpg    1x,
-                      ./images/portfolio-4-tab@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <source
-                    media="(max-width: 767px)"
-                    srcset="
-                      ./images/portfolio-4-mob.jpg    1x,
-                      ./images/portfolio-4-mob@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <img
-                    class="cards__pic"
-                    src="./images/portfolio-4-mob.jpg"
-                    alt="Маркетинг"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-4-desk.jpg    1x,
+                        ./images/portfolio-4-desk@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio-4-tab.jpg    1x,
+                        ./images/portfolio-4-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-4-mob.jpg    1x,
+                        ./images/portfolio-4-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="cards__pic"
+                      src="./images/portfolio-4-mob.jpg"
+                      alt="Маркетинг"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="cards__overlay">
                     <p class="cards__overlay-content">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -290,37 +395,39 @@
             <li class="cards__item">
               <a class="link cards__link" href=""
                 ><div class="cards__thumb">
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      ./images/portfolio-5-desk.jpg    1x,
-                      ./images/portfolio-5-desk@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./images/portfolio-5-tab.jpg    1x,
-                      ./images/portfolio-5-tab@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <source
-                    media="(max-width: 767px)"
-                    srcset="
-                      ./images/portfolio-5-mob.jpg    1x,
-                      ./images/portfolio-5-mob@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <img
-                    class="cards__pic"
-                    src="./images/portfolio-5-mob.jpg"
-                    alt="Додаток"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-5-desk.jpg    1x,
+                        ./images/portfolio-5-desk@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio-5-tab.jpg    1x,
+                        ./images/portfolio-5-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-5-mob.jpg    1x,
+                        ./images/portfolio-5-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="cards__pic"
+                      src="./images/portfolio-5-mob.jpg"
+                      alt="Додаток"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="cards__overlay">
                     <p class="cards__overlay-content">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -339,37 +446,39 @@
             <li class="cards__item">
               <a class="link cards__link" href=""
                 ><div class="cards__thumb">
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      ./images/portfolio-6-desk.jpg    1x,
-                      ./images/portfolio-6-desk@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./images/portfolio-6-tab.jpg    1x,
-                      ./images/portfolio-6-tab@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <source
-                    media="(max-width: 767px)"
-                    srcset="
-                      ./images/portfolio-6-mob.jpg    1x,
-                      ./images/portfolio-6-mob@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <img
-                    class="cards__pic"
-                    src="./images/portfolio-6-mob.jpg"
-                    alt="Веб-сайт"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-6-desk.jpg    1x,
+                        ./images/portfolio-6-desk@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio-6-tab.jpg    1x,
+                        ./images/portfolio-6-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-6-mob.jpg    1x,
+                        ./images/portfolio-6-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="cards__pic"
+                      src="./images/portfolio-6-mob.jpg"
+                      alt="Веб-сайт"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="cards__overlay">
                     <p class="cards__overlay-content">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -388,37 +497,39 @@
             <li class="cards__item">
               <a class="link cards__link" href=""
                 ><div class="cards__thumb">
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      ./images/portfolio-7-desk.jpg    1x,
-                      ./images/portfolio-7-desk@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./images/portfolio-7-tab.jpg    1x,
-                      ./images/portfolio-7-tab@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <source
-                    media="(max-width: 767px)"
-                    srcset="
-                      ./images/portfolio-7-mob.jpg    1x,
-                      ./images/portfolio-7-mob@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <img
-                    class="cards__pic"
-                    src="./images/portfolio-7-mob.jpg"
-                    alt="Дизайн"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-7-desk.jpg    1x,
+                        ./images/portfolio-7-desk@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio-7-tab.jpg    1x,
+                        ./images/portfolio-7-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-7-mob.jpg    1x,
+                        ./images/portfolio-7-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="cards__pic"
+                      src="./images/portfolio-7-mob.jpg"
+                      alt="Дизайн"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="cards__overlay">
                     <p class="cards__overlay-content">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -437,37 +548,39 @@
             <li class="cards__item">
               <a class="link cards__link" href=""
                 ><div class="cards__thumb">
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      ./images/portfolio-8-desk.jpg    1x,
-                      ./images/portfolio-8-desk@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./images/portfolio-8-tab.jpg    1x,
-                      ./images/portfolio-8-tab@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <source
-                    media="(max-width: 767px)"
-                    srcset="
-                      ./images/portfolio-8-mob.jpg    1x,
-                      ./images/portfolio-8-mob@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <img
-                    class="cards__pic"
-                    src="./images/portfolio-8-mob.jpg"
-                    alt="Маркетинг"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-8-desk.jpg    1x,
+                        ./images/portfolio-8-desk@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio-8-tab.jpg    1x,
+                        ./images/portfolio-8-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-8-mob.jpg    1x,
+                        ./images/portfolio-8-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="cards__pic"
+                      src="./images/portfolio-8-mob.jpg"
+                      alt="Маркетинг"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="cards__overlay">
                     <p class="cards__overlay-content">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -486,37 +599,39 @@
             <li class="cards__item">
               <a class="link cards__link" href=""
                 ><div class="cards__thumb">
-                  <source
-                    media="(min-width: 1200px)"
-                    srcset="
-                      ./images/portfolio-9-desk.jpg    1x,
-                      ./images/portfolio-9-desk@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="
-                      ./images/portfolio-9-tab.jpg    1x,
-                      ./images/portfolio-9-tab@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <source
-                    media="(max-width: 767px)"
-                    srcset="
-                      ./images/portfolio-9-mob.jpg    1x,
-                      ./images/portfolio-9-mob@2x.jpg 2x
-                    "
-                    type="image/jpg"
-                  />
-                  <img
-                    class="cards__pic"
-                    src="./images/portfolio-9-mob.jpg"
-                    alt="Додаток"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio-9-desk.jpg    1x,
+                        ./images/portfolio-9-desk@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio-9-tab.jpg    1x,
+                        ./images/portfolio-9-tab@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio-9-mob.jpg    1x,
+                        ./images/portfolio-9-mob@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="cards__pic"
+                      src="./images/portfolio-9-mob.jpg"
+                      alt="Додаток"
+                      width="370"
+                      height="294"
+                    />
+                  </picture>
                   <div class="cards__overlay">
                     <p class="cards__overlay-content">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -645,5 +760,7 @@
         </form>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

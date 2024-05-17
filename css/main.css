@@ -68,7 +68,6 @@ img {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 2px solid tomato;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -504,6 +503,7 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  z-index: 100;
   padding: 48px 40px;
   background-color: var(--primary-white-color);
   overflow-y: scroll;
@@ -1528,8 +1528,6 @@ img {
 .cards__thumb {
   position: relative;
   overflow: hidden;
-  width: 450px;
-  height: 294px;
 }
 @media screen and (min-width: 768px) {
   .cards__thumb {
