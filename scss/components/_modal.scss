@@ -238,10 +238,13 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
 
-  @include media-screen(desktop) {
+  @include media-screen(mobile) {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+  }
+
+  @include media-screen(desktop) {
     font-size: 14px;
   }
 }
@@ -251,7 +254,7 @@
   text-decoration-skip-ink: none;
   color: var(--accent-color);
 
-  @include media-screen(desktop) {
+  @include media-screen(mobile) {
     margin-left: 4px;
   }
 }

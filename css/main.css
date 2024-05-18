@@ -475,7 +475,7 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 480px) {
   .checkbox__label {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -485,6 +485,10 @@ img {
             align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .checkbox__label {
     font-size: 14px;
   }
 }
@@ -495,7 +499,7 @@ img {
           text-decoration-skip-ink: none;
   color: var(--accent-color);
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 480px) {
   .policy-link {
     margin-left: 4px;
   }
