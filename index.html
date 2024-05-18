@@ -25,13 +25,13 @@
     <header class="header">
       <div class="container header__container">
         <nav class="navigation">
-          <a class="logo" href="./index.html" lang="en"
+          <a class="logo logo__header" href="./index.html" lang="en"
             ><span class="logo__text--accent">Web</span>Studio</a
           >
 
           <button
             type="button"
-            class="mob-menu__btn--open"
+            class="mob-menu__btn mob-menu__btn--open"
             aria-label="Перемикач мобільного меню"
             data-menu-open
           >
@@ -86,10 +86,14 @@
 
       <!-- mobile menu -->
       <div class="mob-menu visually-hidden" data-menu>
-        <button type="button" class="mob-menu__btn--close" data-menu-close>
+        <button
+          type="button"
+          class="mob-menu__btn mob-menu__btn--close"
+          data-menu-close
+        >
           <svg width="40" height="40">
             <use
-              class="icon-close"
+              class="icon-menu"
               href="./images/icons.svg#icon-nav-close"
             ></use>
           </svg>

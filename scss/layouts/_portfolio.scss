@@ -38,9 +38,6 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
-
-  @include media-screen(desktop) {
-  }
 }
 
 .cards__item {
@@ -81,6 +78,12 @@
     box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16),
       0 4px 4px 0 rgba(0, 0, 0, 0.06), 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   }
+
+  @include media-screen(tablet) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 }
 
 .cards__link:hover .cards__overlay {
@@ -106,10 +109,14 @@
 }
 
 .cards__overlay-content {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: var(--primary-white-color);
+
+  @media screen and (min-width: 370px) {
+    font-size: 18px;
+  }
 }
 
 .cards__pic {
@@ -123,6 +130,10 @@
   border: 1px solid #eee;
   border-top: 0;
   padding: 20px 24px;
+
+  @include media-screen(tablet) {
+    flex-grow: 1;
+  }
 }
 
 .cards__title {
@@ -132,14 +143,6 @@
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--secondary-text-color);
-
-  @include media-screen(tablet) {
-    font-size: 17px;
-  }
-
-  @include media-screen(desktop) {
-    font-size: 18px;
-  }
 }
 
 .cards__subtitle {

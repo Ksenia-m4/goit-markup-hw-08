@@ -2,8 +2,8 @@
 .hero {
   margin-right: auto;
   margin-left: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
   background: #c4c4c4;
   max-width: 1600px;
@@ -64,6 +64,9 @@
   }
 
   @include media-screen(desktop) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
@@ -104,15 +107,16 @@
     text-align: center;
     color: var(--primary-white-color);
   }
-
-  @include media-screen(desktop) {
-    font-size: 44px;
-    line-height: 1.36;
-  }
 }
 
 .hero__title {
   @include media-screen(tablet) {
     width: 360px;
+  }
+
+  @include media-screen(desktop) {
+    width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
   }
 }

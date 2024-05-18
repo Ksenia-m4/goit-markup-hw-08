@@ -5,10 +5,15 @@
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 93px 15px 0 15px;
+
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   overflow-y: scroll;
+
+  @media screen and (max-width: 479px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -21,26 +26,43 @@
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1.1);
+  transform: scale(1.1);
+
+  @include media-screen(tablet) {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
 }
 
 .modal {
   position: relative;
+  top: 93px;
   width: 100%;
+
   padding: 40px;
+
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include media-screen(mobile) {
+  }
+
+  @include media-screen(mobile-only) {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   @include media-screen(tablet) {
     position: absolute;
     left: 50%;
     top: 50%;
-    max-width: 450px;
+    width: 450px;
 
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate(-50%, -50%);
   }
 
   @include media-screen(desktop) {
-    max-width: 528px;
+    width: 528px;
   }
 
   border-radius: 4px;
@@ -78,7 +100,7 @@
   border-color: rgba(0, 0, 0, 0.1);
   color: var(--primary-black-color);
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  // transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
     color: var(--accent-color);
@@ -180,13 +202,19 @@
 }
 
 .checkbox {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
+
+  margin-right: 8px;
   width: 16px;
   height: 15px;
   border: 2px solid var(--secondary-text-color);
   fill: transparent;
+
+  @include media-screen(desktop) {
+    display: flex;
+  }
 
   &__icon {
     width: 11px;
@@ -206,16 +234,14 @@
 }
 
 .checkbox__label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-
   font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 
   @include media-screen(desktop) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     font-size: 14px;
   }
 }
@@ -224,6 +250,10 @@
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: var(--accent-color);
+
+  @include media-screen(desktop) {
+    margin-left: 4px;
+  }
 }
 
 .modal-button__submit {

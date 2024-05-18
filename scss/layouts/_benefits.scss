@@ -36,10 +36,15 @@
 .benefits__subtitle {
   margin-bottom: 10px;
 
+  text-align: center;
   font-size: 14px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-text-color);
+
+  @include media-screen(tablet) {
+    text-align: start;
+  }
 }
 
 .benefits__content {
